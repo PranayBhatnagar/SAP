@@ -1,0 +1,42 @@
+/* 
+*{
+    margin: 0px;
+    padding: 0px;
+    
+} */
+
+.heading-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.main-container{
+    
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.main > :nth-child(2){
+    flex-direction: row-reverse;
+}
+.main>:nth-child(4){
+    flex-direction: row-reverse;
+}
+.main{
+    padding: 5rem 20rem;
+}
+.img{
+
+    width: 80%;
+    height: auto;
+    margin: 10px 10px 10px 10px;
+
+
+}
