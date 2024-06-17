@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import logo from '../assets/LOGO.jpg'; // Corrected path
 import { Link, animateScroll as scroll } from 'react-scroll';
 import HeroImage from '../assets/hero-image.jpg'; // Ensure you have this image in the assets folder
-
+import Works from './Works';
+import Testimonial from './Testimonial';
 const HomeScreen = () => {
   const history = useHistory();
 
@@ -60,6 +61,8 @@ const HomeScreen = () => {
           </SectionContent>
         </Section>
       </Content>
+      <Works/>
+      <Testimonial/>  
     </Container>
   );
 };
