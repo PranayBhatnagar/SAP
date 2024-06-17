@@ -91,7 +91,7 @@ const TopBar = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #2c2c2c; /* Dark grey background */
+  background-color: #2e2e27; /* Updated to #2E2E27 */
 `;
 
 const Logo = styled.img`
