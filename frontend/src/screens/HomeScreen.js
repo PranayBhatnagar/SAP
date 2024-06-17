@@ -17,7 +17,19 @@ const HomeScreen = () => {
   return (
     <Container>
       <TopBar>
-        <LoginButton onClick={redirectToLogin}>Login</LoginButton>
+        <Logo src={logo} alt="Logo" />
+        <NavList>
+          <NavItem>Products</NavItem>
+          <NavItem>Customers</NavItem>
+          <NavItem>Blogs</NavItem>
+          <NavItem>About</NavItem>
+        </NavList>
+        <ButtonContainer>
+          <LoginButton onClick={redirectToLogin}>Login</LoginButton>
+          <ExploreButton as={motion.button} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            Explore
+          </ExploreButton>
+        </ButtonContainer>
       </TopBar>
       <HeroSection>
         <HeroContent>
@@ -30,7 +42,7 @@ const HomeScreen = () => {
           </Link>
         </HeroContent>
         <HeroImageContainer>
-          <img src={logo} alt="Hero" />
+          <img src={HeroImage} alt="Hero" />
         </HeroImageContainer>
       </HeroSection>
       <Content id="info">
@@ -73,26 +85,65 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f4f8;
+  background-color: #1c1c1c; /* Dark background */
 `;
 
 const TopBar = styled.div`
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  background-color: #2c3e50;
+  background-color: #2c2c2c; /* Dark grey background */
+`;
+
+const Logo = styled.img`
+  height: 40px;
+  width: auto;
+`;
+
+const NavList = styled.ul`
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+`;
+
+const NavItem = styled.li`
+  color: white;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 10px;
 `;
 
 const LoginButton = styled.button`
   padding: 10px 20px;
   color: white;
-  background-color: #27ae60;
+  background-color: #4c4c4c; /* Grey background */
   border: none;
   border-radius: 4px;
   cursor: pointer;
   &:hover {
-    background-color: #2ecc71;
+    background-color: #6c6c6c; /* Lighter grey on hover */
+  }
+`;
+
+const ExploreButton = styled(motion.button)`
+  padding: 10px 20px;
+  color: white;
+  background-color: #6c6c6c; /* Lighter grey background */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: #8c8c8c; /* Even lighter grey on hover */
   }
 `;
 
@@ -102,7 +153,7 @@ const HeroSection = styled.div`
   align-items: center;
   width: 100%;
   padding: 50px;
-  background-color: #ffffff;
+  background-color: #2c2c2c; /* Dark grey background */
 `;
 
 const HeroContent = styled.div`
@@ -121,26 +172,14 @@ const HeroImageContainer = styled.div`
 
 const Title = styled.h1`
   margin-bottom: 20px;
-  color: #2c3e50;
+  color: white; /* White text */
   text-align: left;
 `;
 
 const Subtitle = styled.h2`
   margin-bottom: 20px;
-  color: #7f8c8d;
+  color: #bfbfbf; /* Light grey text */
   text-align: left;
-`;
-
-const ExploreButton = styled(motion.button)`
-  padding: 10px 20px;
-  color: white;
-  background-color: #27ae60;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  &:hover {
-    background-color: #2ecc71;
-  }
 `;
 
 const Content = styled.div`
@@ -149,13 +188,13 @@ const Content = styled.div`
   align-items: center;
   width: 100%;
   padding: 20px;
-  background-color: #f0f4f8;
+  background-color: #1c1c1c; /* Dark background */
 `;
 
 const Section = styled.div`
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #2c2c2c; /* Dark grey background */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -164,16 +203,16 @@ const Section = styled.div`
 
 const SectionTitle = styled.h3`
   margin-bottom: 10px;
-  color: #2c3e50;
+  color: white; /* White text */
 `;
 
 const SectionContent = styled.p`
-  color: #7f8c8d;
+  color: #bfbfbf; /* Light grey text */
   line-height: 1.6;
 `;
 
 const SectionContentList = styled.ul`
-  color: #7f8c8d;
+  color: #bfbfbf; /* Light grey text */
   line-height: 1.6;
   list-style-type: disc;
   padding-left: 20px;
