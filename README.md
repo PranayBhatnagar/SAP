@@ -2,7 +2,10 @@
 
 Welcome to the AI Based Green Credit Management System project! This system helps manage green credits efficiently and effectively, allowing users to track and quantify their environmental impact.
 
-![Project Screenshot](./screenshot.png)
+![Screenshot 2024-06-18 112854](https://github.com/PranayBhatnagar/SAP/assets/108617140/b128f06b-f6cf-445c-b10a-972f4d22d72e)
+![Screenshot 2024-06-18 112832](https://github.com/PranayBhatnagar/SAP/assets/108617140/5aa03c8d-4090-4ea6-92c1-7c8d53109eab)
+![Screenshot 2024-06-18 112822](https://github.com/PranayBhatnagar/SAP/assets/108617140/26a73b22-632d-4bf7-a8ab-43a7a793c991)
+
 
 ## Features
 
