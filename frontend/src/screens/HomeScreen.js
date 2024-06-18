@@ -7,7 +7,12 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 import HeroImage from '../assets/hero-image.jpg'; // Ensure you have this image in the assets folder
 import Works from './Works';
 import Testimonial from './Testimonial';
+<<<<<<< HEAD
 
+=======
+import Footer from '../components/Footer/Footer';
+import Security from '../components/security/Security';
+>>>>>>> 18cfe74d3956cdbc02d9005364ad679d85749404
 const HomeScreen = () => {
   const history = useHistory();
 
@@ -16,6 +21,7 @@ const HomeScreen = () => {
   };
 
   return (
+    <>
     <Container>
       <TopBar>
         <Logo src={logo} alt="Logo" />
@@ -75,8 +81,15 @@ const HomeScreen = () => {
         </Section>
       </Content>
       <Works/>
+<<<<<<< HEAD
       <Testimonial/>
+=======
+      <Testimonial/> 
+>>>>>>> 18cfe74d3956cdbc02d9005364ad679d85749404
     </Container>
+       <Footer/>
+       <Security/>
+    </>
   );
 };
 
