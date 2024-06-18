@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import logo from '../assets/LOGO.jpg'; // Corrected path
 import { Link, animateScroll as scroll } from 'react-scroll';
 import HeroImage from '../assets/hero-image.jpg'; // Ensure you have this image in the assets folder
+import Works from './Works';
+import Testimonial from './Testimonial';
 
 const HomeScreen = () => {
   const history = useHistory();
@@ -18,10 +20,10 @@ const HomeScreen = () => {
       <TopBar>
         <Logo src={logo} alt="Logo" />
         <NavList>
-          <NavItem>Products</NavItem>
+          <NavItem>Our Products</NavItem>
           <NavItem>Customers</NavItem>
           <NavItem>Blogs</NavItem>
-          <NavItem>About</NavItem>
+          <NavItem>About Us</NavItem>
         </NavList>
         <ButtonContainer>
           <LoginButton onClick={redirectToLogin}>Login</LoginButton>
@@ -72,6 +74,8 @@ const HomeScreen = () => {
           </SectionContent>
         </Section>
       </Content>
+      <Works/>
+      <Testimonial/>
     </Container>
   );
 };
@@ -82,7 +86,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1c1c1c; /* Dark background */
+  background-color: #f9f9f9; /* Off-white background */
 `;
 
 const TopBar = styled.div`
@@ -91,7 +95,7 @@ const TopBar = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #2e2e27; /* Updated to #2E2E27 */
+  background-color: #000000; /* Black header */
 `;
 
 const Logo = styled.img`
@@ -150,7 +154,7 @@ const HeroSection = styled.div`
   align-items: center;
   width: 100%;
   padding: 50px;
-  background-color: #2c2c2c; /* Dark grey background */
+  background-color: #ffffff; /* White background */
 `;
 
 const HeroContent = styled.div`
@@ -169,13 +173,13 @@ const HeroImageContainer = styled.div`
 
 const Title = styled.h1`
   margin-bottom: 20px;
-  color: white; /* White text */
+  color: #2c3e50; /* Dark text */
   text-align: left;
 `;
 
 const Subtitle = styled.h2`
   margin-bottom: 20px;
-  color: #bfbfbf; /* Light grey text */
+  color: #7f8c8d; /* Light grey text */
   text-align: left;
 `;
 
@@ -185,13 +189,13 @@ const Content = styled.div`
   align-items: center;
   width: 100%;
   padding: 20px;
-  background-color: #1c1c1c; /* Dark background */
+  background-color: #f9f9f9; /* Off-white background */
 `;
 
 const Section = styled.div`
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #2c2c2c; /* Dark grey background */
+  background-color: #ffffff; /* White background */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -200,16 +204,16 @@ const Section = styled.div`
 
 const SectionTitle = styled.h3`
   margin-bottom: 10px;
-  color: white; /* White text */
+  color: #2c3e50; /* Dark text */
 `;
 
 const SectionContent = styled.p`
-  color: #bfbfbf; /* Light grey text */
+  color: #7f8c8d; /* Light grey text */
   line-height: 1.6;
 `;
 
 const SectionContentList = styled.ul`
-  color: #bfbfbf; /* Light grey text */
+  color: #7f8c8d; /* Light grey text */
   line-height: 1.6;
   list-style-type: disc;
   padding-left: 20px;
